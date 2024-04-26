@@ -10,15 +10,6 @@ const Items = [
       img: 'src/assets/chocolate Martini.jpeg',
    },
    {
-      id: 9,
-      cuisine: 'Southern',
-      title: "Shrimp and Grits",
-      category: 'Breakfast',
-      price: '12.99',
-      description: 'Buttery grits topped with shrimp, bacon and a spicy Cajun cream sauce',
-      img: 'src/assets/shrimp and grits.jpeg',
-   },
-   {
       id: 13,
       cuisine: 'American',
       title: 'Fruit Smoothie',
@@ -26,6 +17,15 @@ const Items = [
       price: '6.99',
       description: 'A refreshing blend of fresh fruit, yogurt, and honey',
       img: 'src/assets/fruit smoothie.jpeg',
+   },
+   {
+      id: 9,
+      cuisine: 'Southern',
+      title: "Shrimp and Grits",
+      category: 'Breakfast',
+      price: '12.99',
+      description: 'Buttery grits topped with shrimp, bacon and a spicy Cajun cream sauce',
+      img: 'src/assets/shrimp and grits.jpeg',
    },
    {
       id: 15,

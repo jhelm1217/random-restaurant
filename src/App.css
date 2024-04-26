@@ -13,7 +13,7 @@ body {
   color: white;
   background-size: cover; 
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(3, 2, 2, 0.5); 
 }
 
 .transparent-box {
@@ -21,6 +21,15 @@ body {
   padding: 20px; /* Adjust as needed */
   color: white;
 }
+.gallery-item {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 .menu {
   display: grid;
   grid-template-columns: 1fr; /* go to single column on small screens */

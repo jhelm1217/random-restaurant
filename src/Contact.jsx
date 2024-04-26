@@ -14,7 +14,10 @@ function Contact() {
             <h3 style={{ textAlign: 'center '}}>Hit Our Line!</h3>
             <p style={{ textAlign: 'center '}}>Tel: (000) 000-0000!</p>
             <h3 style={{ textAlign: 'center '}}>When You Can See Us</h3>
-            <p style={{ textAlign: 'center '}}>Monday-Friday 11AM-7PM</p>
+            <p style={{ textAlign: 'center '}}>Monday-Tuesday CLOSED</p>
+            <p style={{ textAlign: 'center '}}>Wednesday-Friday 11AM-11PM</p>
+            <p style={{ textAlign: 'center '}}>Saturday-Sunday 11AM-2AM</p>
+
         </div>
     )
 }

@@ -32,8 +32,10 @@ function App() {
   const cuisine_types = ['Italian', 'Mexican', 'Southern', 'American', 'Asian', 'Mediterranean', 'International'];
   const [selectedCuisine, setSelectedCuisine] = useState('');
 
+  //this function is used to map over the differnt types of cuisines in the array and filter it depending on what you select
+  //it is to update the selected cuisine state
   const filterByCuisine = (cuisine) => {
-    setSelectedCuisine(cuisine);
+    setSelectedCuisine(cuisine); 
     if (cuisine === '') {
       setItemsData(items); //reset to all items if no cuisine is selected
     } else {
@@ -43,13 +45,16 @@ function App() {
   };
   
   
-
+  // same as above, this function filters over the different types of categorys i have in my array,
+  // basically is to update the active category state. if category is "All", 
+  //it sets itemsData state to the original items array. 
   const filterItems = (category) => {
     setActiveCategory(category);
     if (category === "All") {
       setItemsData(items);
       return;
     }
+    //  it filters the items array based on the category and sets the itemsData state to the filtered array.
     const newItem = items.filter((item) => item.category === category);
     setItemsData(newItem);
   };
@@ -70,6 +75,10 @@ function App() {
         <ul>
           <Link to='/about' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>About</Link>
           <Link to='/contact' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Contact</Link>
+          <Link to='/gallery' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Gallery</Link>
+
+          {/* <Link to='/menu' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Menu</Link> */}
+
 
         </ul>
       </nav>
@@ -77,7 +86,6 @@ function App() {
         <div className="title">
           <h2 style={{ textAlign: 'center' }}>
             </h2>
-          {/* <div className="underline"></div> */}
         </div>
         <div className="transparent-box">
           <Title />
