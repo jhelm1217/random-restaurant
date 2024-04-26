@@ -5,18 +5,14 @@ import Menu from "./Menu"
 import items from "./Items"
 import Categories from "./Categories"
 import DropdownMenu from "./DropdownMenu"
-// import SearchMenu from "./searchMenu"
-// import logo from "./src/assets/logo.jpeg"
-
 
 const Title = () => {
   return (
     <h1 style= {{ textAlign: 'center' }}>
-     Grab A Bite!!!
+     Grab A Bite!!
     </h1>
   )
 }
-
 
 function App() {
   apiCall() // call the api function
@@ -24,16 +20,13 @@ function App() {
   const [itemsData, setItemsData] = useState([]); //used go store data and update the fetched data from the api
   const [activeCategory, setActiveCategory] = useState(""); // used to store and update the currently active category, buttons
   const [categories, setCategories] = useState([]); //used to store the list of categories such as breakfast, lunch, dinner etc
+  const [selectedCuisine, setSelectedCuisine] = useState(''); //it starts out as an empty array, but once i select a cuisine it will update to that value. 
 
-  // const drink = items.filter((item) => item.category === 'Drink');
-  // const breakfast = items.filter((item) => item.category === 'Breakfast');
-
-  const allCategories = ["All", ...new Set(items.map((item) => item.category))]; // This is all the categories that are in my menu.
+  const allCategories = ["All", ...new Set(items.map((item) => item.category))]; // creates an array with all the categories. ALL is the first element, then it will filter through the array.
   const cuisine_types = ['Italian', 'Mexican', 'Southern', 'American', 'Asian', 'Mediterranean', 'International'];
-  const [selectedCuisine, setSelectedCuisine] = useState('');
 
   //this function is used to map over the differnt types of cuisines in the array and filter it depending on what you select
-  //it is to update the selected cuisine state
+  //it is to update the selected cuisine state from the items Data. 
   const filterByCuisine = (cuisine) => {
     setSelectedCuisine(cuisine); 
     if (cuisine === '') {
@@ -62,11 +55,11 @@ function App() {
 
 
 
+  //this function  above, takes two arguements and sets the intial value and starting point?
   useEffect(() => {
     setItemsData(items);
     setCategories(allCategories);
   }, []);
-  //this function  above, takes two arguements and sets the intial value and starting point?
 
 
   return (
@@ -76,10 +69,6 @@ function App() {
           <Link to='/about' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>About</Link>
           <Link to='/contact' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Contact</Link>
           <Link to='/gallery' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Gallery</Link>
-
-          {/* <Link to='/menu' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Menu</Link> */}
-
-
         </ul>
       </nav>
       <section className="menu section">
@@ -92,19 +81,10 @@ function App() {
           <DropdownMenu 
           cuisine_types={cuisine_types}
           onSelect={filterByCuisine} />
-          {/* <SearchMenu menuItems={items} /> i've added my searcg box above my menu items here */}
           <Categories
             categories={categories}
             activeCategory={activeCategory}
             filterItems={filterItems} />
-            {/* <div className="menu-section">
-              <h2>Drinks</h2>
-              <Menu items={drink} />
-            </div>
-            <div className="menu-section">
-              <h2>Breakfast</h2>
-              <Menu items={breakfast} />
-            </div> */}
           <Menu items={itemsData} />
         </div>
       </section>
