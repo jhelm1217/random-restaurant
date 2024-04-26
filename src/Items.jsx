@@ -24,7 +24,7 @@ const Items = [
       category: 'Drink',
       price: '9.99',
       description: 'A decadent cocktail made with chocolate liqueur, chocolate and cream',
-      img: {chocMartini},
+      img: chocMartini,
    },
    {
       id: 13,
@@ -33,7 +33,7 @@ const Items = [
       category: 'Drink',
       price: '6.99',
       description: 'A refreshing blend of fresh fruit, yogurt, and honey',
-      img: {smoothie},
+      img: smoothie,
    },
    {
       id: 9,
@@ -42,7 +42,7 @@ const Items = [
       category: 'Breakfast',
       price: '12.99',
       description: 'Buttery grits topped with shrimp, bacon and a spicy Cajun cream sauce',
-      img: {shrimp},
+      img: shrimp,
    },
    {
       id: 15,
@@ -51,7 +51,7 @@ const Items = [
       category: 'Breakfast',
       price: '10.99',
       description: 'Toasted bread topped with mashed avocado, sliced tomatoes, and a poached egg',
-      img: {avocado},
+      img: avocado,
    },
    {
       id: 21,
@@ -60,7 +60,7 @@ const Items = [
       category: 'Breakfast',
       price: '11.99',
       description: 'A toasted bagel topped with smoked salmon, cream cheese, capers and red onion',
-      img: {bagel},
+      img: bagel,
    },
    {
       id: 50,
@@ -69,7 +69,7 @@ const Items = [
       category: 'Breakfast',
       price: '7.99',
       description: 'Assorted fresh fruits, such as melon, pineapple, berries, and grapes',
-      img: {fruit},
+      img: fruit,
    },
    {
       id: 19,
@@ -78,7 +78,7 @@ const Items = [
       category: 'Appetizer',
       price: '9.99',
       description: 'Crispy fried chicken wings tossed in your choice of buffalo, barbecue or honey mustard',
-      img: {wings},
+      img: wings,
    },
    {
       id: 35,
@@ -87,7 +87,7 @@ const Items = [
       category: 'Lunch',
       price: '9.99',
       description: 'A salad topped with grilled chicken, peppers, onions, and avocado with tortilla chips',
-      img: {fajita},
+      img: fajita,
    },
    {
       id: 3,
@@ -96,7 +96,7 @@ const Items = [
       category: 'Lunch',
       price: '8.99',
       description: 'A classic salad of romaine lettuce, grilled chicken, croutons, and Caesar dressing',
-      img: {ceasar},
+      img: ceasar,
    },
    {
       id: 48,
@@ -105,7 +105,7 @@ const Items = [
       category: 'Lunch',
       price: '11.99',
       description: 'Stir-fried vegetables with tofu and a soy sauce-based sauce, served over rice',
-      img: {stir},
+      img: stir,
    },
    {
       id: 54,
@@ -114,7 +114,7 @@ const Items = [
       category: 'Lunch',
       price: '10.99',
       description: 'Grilled chicken, mozzarella cheese, pesto, and sun-dried tomatoes on a pressed panini bread',
-      img: {pesto},
+      img: pesto,
    },
    {
       id: 49,
@@ -123,7 +123,7 @@ const Items = [
       category: 'Dinner',
       price: '17.99',
       description: 'Sautéed shrimp in a garlic and butter sauce, served with bread',
-      img: {garlic},
+      img: garlic,
    },
    {
       id: 57,
@@ -132,7 +132,7 @@ const Items = [
       category: 'Dinner',
       price: '16.99',
       description: 'Layers of pasta, tomato sauce, and assorted vegetables, baked with mozzarella cheese',
-      img: {lasagna},
+      img: lasagna,
    },
    {
       id: 27,
@@ -141,7 +141,7 @@ const Items = [
       category: 'Dinner',
       price: '13.99',
       description: 'A juicy salmon patty topped with avocado and a spicy mayo sauce, served on a brioche bun',
-      img: {salmon},
+      img: salmon,
    },
    {
       id: 44,
@@ -150,7 +150,7 @@ const Items = [
       category: 'Dinner',
       price: '19.99',
       description: 'Chicken breasts stuffed with spinach and feta cheese, served with roasted potatoes and vegetables',
-      img: {spinach},
+      img: spinach,
    },
 
 ];
