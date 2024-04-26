@@ -8,7 +8,7 @@ function Header() {
       borderBottom: '2px solid white',
       animation: 'hithere 4s forwards'
     }}>
-      Amethyst Bistro & Bar
+      Amethyst Bistro & Bar!
     </div>
   )
 }
