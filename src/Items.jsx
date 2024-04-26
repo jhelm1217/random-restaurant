@@ -1,5 +1,5 @@
 import chocMartini from './assets/chocolate-Martini.jpeg'
-import smoothie from './assets/fruit-smothie.jpeg'
+import smoothie from './assets/fruit-smoothie.jpeg'
 import shrimp from './assets/shrimp-and-grits.jpeg'
 import avocado from './assets/avocado-toast.jpeg'
 import bagel from './assets/bagel-lox.jpeg'
