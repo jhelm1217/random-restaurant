@@ -12,6 +12,7 @@ import './App.css'
 
 import About from './About'
 import App from './App'
+import Contact from './Contact'
 import ErrorPage from './ErrorPage'
 import Header from './Header'
 import Footer from './Footer'
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       },
     ]
   }

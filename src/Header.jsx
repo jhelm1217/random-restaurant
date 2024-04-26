@@ -1,7 +1,7 @@
 function Header() {
   return (
-    <div>
-      Menu
+    <div style = {{fontSize: '6em', fontFamily: 'cursive', textAlign: 'center', fontWeight: "bold", borderBottom: '2px solid white'}}>
+      Amethyst Bistro & Bar
     </div>
   )
 }
