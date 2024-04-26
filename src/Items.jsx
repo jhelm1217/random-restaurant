@@ -14,7 +14,6 @@ import lasagna from './assets/vegetable-lasagna.jpeg'
 import salmon from './assets/salmon-burger.jpeg'
 import spinach from './assets/spinach-stuffed-chicken.jpeg'
 
-
 const Items = [
    //this is an array of all of my items that will be on my menu. including images, descr, price, title and category.
    {
