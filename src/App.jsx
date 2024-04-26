@@ -29,16 +29,16 @@ function App() {
   //it is to update the selected cuisine state from the items Data. 
   const filterByCuisine = (cuisine) => {
     setSelectedCuisine(cuisine); 
-    if (cuisine === '') {
+    if (cuisine === '') { //if no cuisine is selected
       setItemsData(items); //reset to all items if no cuisine is selected
     } else {
-      const filteredItems = items.filter((item) => item.cuisine === cuisine);
-      setItemsData(filteredItems);
+      const filteredItems = items.filter((item) => item.cuisine === cuisine); // filter through the items array and fiter out the cuisine thats needed?
+      setItemsData(filteredItems); // show the selected cuisine after the filter
     }
   };
   
   
-  // same as above, this function filters over the different types of categorys i have in my array,
+  // same as above, this function filters over the different types of categorys i have in my items array,
   // basically is to update the active category state. if category is "All", 
   //it sets itemsData state to the original items array. 
   const filterItems = (category) => {
@@ -53,9 +53,7 @@ function App() {
   };
 
 
-
-
-  //this function  above, takes two arguements and sets the intial value and starting point?
+  //this takes two arguements and sets the intial value and starting point?
   useEffect(() => {
     setItemsData(items);
     setCategories(allCategories);

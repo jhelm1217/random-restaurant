@@ -1,3 +1,20 @@
+import chocMartini from './assets/chocolate-Martini.jpeg'
+import smoothie from './assets/fruit-smothie.jpeg'
+import shrimp from './assets/shrimp-and-grits.jpeg'
+import avocado from './assets/avocado-toast.jpeg'
+import bagel from './assets/bagel-lox.jpeg'
+import fruit from './assets/fruit-salad.jpeg'
+import wings from './assets/chicken-wings.jpeg'
+import fajita from './assets/fajita-salad.jpeg'
+import ceasar from './assets/chicken-ceaser-salad.jpeg'
+import stir from './assets/stir-fry.jpeg'
+import pesto from './assets/chicken-pesto-panini.jpeg'
+import garlic from './assets/garlic-shrimp.jpeg'
+import lasagna from './assets/vegetable-lasagna.jpeg'
+import salmon from './assets/salmon-burger.jpeg'
+import spinach from './assets/spinach-stuffed-chicken.jpeg'
+
+
 const Items = [
    //this is an array of all of my items that will be on my menu. including images, descr, price, title and category.
    {
@@ -7,7 +24,7 @@ const Items = [
       category: 'Drink',
       price: '9.99',
       description: 'A decadent cocktail made with chocolate liqueur, chocolate and cream',
-      img: 'src/assets/chocolate Martini.jpeg',
+      img: {chocMartini},
    },
    {
       id: 13,
@@ -16,7 +33,7 @@ const Items = [
       category: 'Drink',
       price: '6.99',
       description: 'A refreshing blend of fresh fruit, yogurt, and honey',
-      img: 'src/assets/fruit smoothie.jpeg',
+      img: {smoothie},
    },
    {
       id: 9,
@@ -25,7 +42,7 @@ const Items = [
       category: 'Breakfast',
       price: '12.99',
       description: 'Buttery grits topped with shrimp, bacon and a spicy Cajun cream sauce',
-      img: 'src/assets/shrimp and grits.jpeg',
+      img: {shrimp},
    },
    {
       id: 15,
@@ -34,7 +51,7 @@ const Items = [
       category: 'Breakfast',
       price: '10.99',
       description: 'Toasted bread topped with mashed avocado, sliced tomatoes, and a poached egg',
-      img: 'src/assets/avocado toast .jpeg',
+      img: {avocado},
    },
    {
       id: 21,
@@ -43,7 +60,7 @@ const Items = [
       category: 'Breakfast',
       price: '11.99',
       description: 'A toasted bagel topped with smoked salmon, cream cheese, capers and red onion',
-      img: 'src/assets/bagel lox.jpeg',
+      img: {bagel},
    },
    {
       id: 50,
@@ -52,7 +69,7 @@ const Items = [
       category: 'Breakfast',
       price: '7.99',
       description: 'Assorted fresh fruits, such as melon, pineapple, berries, and grapes',
-      img: 'src/assets/fruit salad.jpeg',
+      img: {fruit},
    },
    {
       id: 19,
@@ -61,7 +78,7 @@ const Items = [
       category: 'Appetizer',
       price: '9.99',
       description: 'Crispy fried chicken wings tossed in your choice of buffalo, barbecue or honey mustard',
-      img: 'src/assets/chicken wings .jpeg',
+      img: {wings},
    },
    {
       id: 35,
@@ -70,7 +87,7 @@ const Items = [
       category: 'Lunch',
       price: '9.99',
       description: 'A salad topped with grilled chicken, peppers, onions, and avocado with tortilla chips',
-      img: 'src/assets/fajita salad .jpeg',
+      img: {fajita},
    },
    {
       id: 3,
@@ -79,7 +96,7 @@ const Items = [
       category: 'Lunch',
       price: '8.99',
       description: 'A classic salad of romaine lettuce, grilled chicken, croutons, and Caesar dressing',
-      img: 'src/assets/chicken-ceaser-salad.jpeg',
+      img: {ceasar},
    },
    {
       id: 48,
@@ -88,7 +105,7 @@ const Items = [
       category: 'Lunch',
       price: '11.99',
       description: 'Stir-fried vegetables with tofu and a soy sauce-based sauce, served over rice',
-      img: 'src/assets/stir fry .jpeg',
+      img: {stir},
    },
    {
       id: 54,
@@ -97,7 +114,7 @@ const Items = [
       category: 'Lunch',
       price: '10.99',
       description: 'Grilled chicken, mozzarella cheese, pesto, and sun-dried tomatoes on a pressed panini bread',
-      img: 'src/assets/chicken pesto panini.jpeg',
+      img: {pesto},
    },
    {
       id: 49,
@@ -106,7 +123,7 @@ const Items = [
       category: 'Dinner',
       price: '17.99',
       description: 'Sautéed shrimp in a garlic and butter sauce, served with bread',
-      img: 'src/assets/garlic shrimp .jpeg',
+      img: {garlic},
    },
    {
       id: 57,
@@ -115,7 +132,7 @@ const Items = [
       category: 'Dinner',
       price: '16.99',
       description: 'Layers of pasta, tomato sauce, and assorted vegetables, baked with mozzarella cheese',
-      img: 'src/assets/vegetable lasagna .jpeg',
+      img: {lasagna},
    },
    {
       id: 27,
@@ -124,7 +141,7 @@ const Items = [
       category: 'Dinner',
       price: '13.99',
       description: 'A juicy salmon patty topped with avocado and a spicy mayo sauce, served on a brioche bun',
-      img: 'src/assets/salmon burger.jpeg',
+      img: {salmon},
    },
    {
       id: 44,
@@ -133,7 +150,7 @@ const Items = [
       category: 'Dinner',
       price: '19.99',
       description: 'Chicken breasts stuffed with spinach and feta cheese, served with roasted potatoes and vegetables',
-      img: 'src/assets/spinach stuffed chicken.jpeg',
+      img: {spinach},
    },
 
 ];
