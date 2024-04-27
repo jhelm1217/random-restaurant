@@ -11,7 +11,7 @@ function Gallery() {
             <div className="gallery" tyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <img src= {purpDrink} alt="Image 1" className="gallery-item" style ={{ width: '50%', height: 'auto' }}/>
                 <img src ={houstonBar} alt="Image 2" className="gallery-item" style ={{ width: '50%', height: 'auto' }}/>
-                <img src = {bathroom} alt="Image 3" className="gallery-item" style ={{ width: '50%', height: 'auto' }}/>
+                <img src ={bathroom} alt="Image 3" className="gallery-item" style ={{ width: '50%', height: 'auto' }}/>
 
             </div>
          </div> 
