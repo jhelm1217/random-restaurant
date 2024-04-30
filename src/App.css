@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 15px;
   overflow-y: visible;
-  background-image: url(src/assets/purple.webp);
+  background-image: url('./assets/purple.webp');
   color: white;
   background-size: cover; 
   background-repeat: no-repeat;
