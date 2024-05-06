@@ -11,7 +11,7 @@ function Contact() {
             rel="noreferrer" style= {{color: 'white' }}>
             <p style={{ textAlign: 'center '}}>348 E Main St, Lexington, KY</p>
             </a>
-            <h3 style={{ textAlign: 'center '}}>Hit Our Line!</h3>
+            <h3 style={{ textAlign: 'center '}}>Don't Be Shy, Hit Our Line!</h3>
             <p style={{ textAlign: 'center '}}>Tel: (000) 000-0000!</p>
             <h3 style={{ textAlign: 'center '}}>When You Can See Us</h3>
             <p style={{ textAlign: 'center '}}>Monday-Tuesday CLOSED</p>
