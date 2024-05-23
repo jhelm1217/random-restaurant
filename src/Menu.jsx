@@ -1,5 +1,6 @@
 // import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
 const Menu = ({ items }) => {
 
@@ -31,6 +32,73 @@ const Menu = ({ items }) => {
 
     );
 };
+
+//MenuItem Tab
+
+const MenuList = () => {
+        const [items, setItems] = useState([]);
+    
+        const getMenu = () => {
+            axios.get('http://127.0.0.1:8000/MenuItem/')
+                .then(response => {
+                    console.log ('Hereeee', response);
+                    setItems(response.data);
+                })
+                .catch(error => console.log('ERROR: ', error));
+        };
+    
+        useEffect(() => {
+            getMenu(); //built in function that takes two things to complete, 
+        }, []);
+    
+
+    
+// For my customer tab now.
+
+const NewCustomer = ({ getCustomer}) => {
+    const [name, setName] = useState('');
+   
+
+    const createCustomer  = () => {
+        axios.post('http://127.0.0.1:8000/customer/', {
+            name: name
+        })
+            .then(response => {
+                console.log('Customer response: ', response)
+                if (response.status === 200) {
+                    getCustomer()
+                    setName('');
+                }
+            })
+            .catch(error => console.log('ERROC: ', error))
+         }
+         return (
+            <div style ={{ marginTop: 20 }} >
+                <h2> New Customer </h2>
+                <input
+                onChange={e => setName (e.target.value)}
+                placeholder="Enter Name"
+                value={name}
+                />
+
+                <button onClick={createCustomer}>
+                    New Customer
+                </button>
+            </div>
+         )
+
+ 
+}
+
+
+        return (
+            <div className="p-5">
+                <MenuList items={items} />
+                <NewCustomer getCustomer= {NewCustomer}/>
+            </div>
+        );
+    };
+
 
 
 
