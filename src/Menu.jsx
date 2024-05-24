@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
-const Menu = ({ items }) => {
+const Menu = ({ items, addToCart }) => {
+
 
     //this file, is used to section off the items on my menu and center them on my page.
     return (
@@ -12,6 +13,8 @@ const Menu = ({ items }) => {
         <div className="container">
             <div className="section-center">
                 {items.map((item) => { //used to iterate over each item in my items array
+               
+
                     const { id, title, description, price, img } = item; //this is everything that will be displayed
                     return (
                         <article key={id} className="menu-item">
@@ -33,6 +36,7 @@ const Menu = ({ items }) => {
     );
 };
 
+
 //MenuItem Tab
 
 const MenuList = () => {
@@ -48,10 +52,10 @@ const MenuList = () => {
         };
     
         useEffect(() => {
-            getMenu(); //built in function that takes two things to complete, 
+            getMenu(); //built in function that takes two things to complete, git add .
         }, []);
     
-
+       
     
 // For my customer tab now.
 
@@ -89,6 +93,7 @@ const NewCustomer = ({ getCustomer}) => {
 
  
 }
+
 
 
         return (
