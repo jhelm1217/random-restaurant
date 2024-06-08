@@ -22,6 +22,9 @@ function App() {
   const [activeCategory, setActiveCategory] = useState(""); // used to store and update the currently active category, buttons
   const [categories, setCategories] = useState([]); //used to store the list of categories such as breakfast, lunch, dinner etc
   const [selectedCuisine, setSelectedCuisine] = useState(''); //it starts out as an empty array, but once i select a cuisine it will update to that value. 
+  const [showOrderForm, setShowOrderForm] = useState(false); // State to control visibility of the order form
+  const [cart, setCart] = useState([]);
+
 
   const allCategories = ["All", ...new Set(items.map((item) => item.category))]; // creates an array with all the categories. ALL is the first element, then it will filter through the array.
   const cuisine_types = ['Italian', 'Mexican', 'Southern', 'American', 'Asian', 'Mediterranean', 'International'];
@@ -60,6 +63,17 @@ function App() {
     setCategories(allCategories);
   }, []);
 
+  const handleOrderSubmit = (formData) => {
+    // Process the order data, e.g., send it to a backend server
+    console.log("Order submitted:", formData);
+    setShowOrderForm(false);
+  };
+
+
+    const addToCart = (item) => {
+        setCart([...cart, item]);
+    };
+
 
   return (
     <main>
@@ -67,7 +81,9 @@ function App() {
         <ul>
           <Link to='/about' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>About</Link>
           <Link to='/contact' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Contact</Link>
+          <Link to='/orderForm' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Order Here!</Link>
           <Link to='/gallery' style= {{ color: 'white', textDecoration: 'none', display: 'inline-block', padding: '10px 20px', backgroundColor: 'purple', borderRadius: '5px' }}>Gallery</Link>
+
         </ul>
       </nav>
       <section className="menu section">
@@ -80,11 +96,15 @@ function App() {
           <DropdownMenu 
           cuisine_types={cuisine_types}
           onSelect={filterByCuisine} />
+            {/* <OrderForm items={itemsData} onSubmit={handleOrderSubmit} /> */}
           <Categories
             categories={categories}
             activeCategory={activeCategory}
             filterItems={filterItems} />
-          <Menu items={itemsData} />
+          {/* <Menu items={itemsData} /> */}
+          <Menu items={itemsData} onAddToCart={addToCart} />
+
+         
         </div>
       </section>
     </main>

@@ -1,8 +1,12 @@
 // import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 import axios from 'axios';
+<<<<<<< HEAD
+=======
 
-const Menu = ({ items }) => {
+const Menu = ({ items, addToCart }) => {
+>>>>>>> ad8acb098037bc14c73158a9787d708afea29c32
+
 
     //this file, is used to section off the items on my menu and center them on my page.
     return (
@@ -12,6 +16,8 @@ const Menu = ({ items }) => {
         <div className="container">
             <div className="section-center">
                 {items.map((item) => { //used to iterate over each item in my items array
+               
+
                     const { id, title, description, price, img } = item; //this is everything that will be displayed
                     return (
                         <article key={id} className="menu-item">
@@ -81,6 +87,75 @@ const MenuList = () => {
             <div className="p-5">
                 <MenuList items={items} />
                 <NewMenu getMenu={getMenu} />
+            </div>
+        );
+    };
+
+
+
+//MenuItem Tab
+
+const MenuList = () => {
+        const [items, setItems] = useState([]);
+    
+        const getMenu = () => {
+            axios.get('http://127.0.0.1:8000/MenuItem/')
+                .then(response => {
+                    console.log ('Hereeee', response);
+                    setItems(response.data);
+                })
+                .catch(error => console.log('ERROR: ', error));
+        };
+    
+        useEffect(() => {
+            getMenu(); //built in function that takes two things to complete, git add .
+        }, []);
+    
+       
+    
+// For my customer tab now.
+
+const NewCustomer = ({ getCustomer}) => {
+    const [name, setName] = useState('');
+   
+
+    const createCustomer  = () => {
+        axios.post('http://127.0.0.1:8000/customer/', {
+            name: name
+        })
+            .then(response => {
+                console.log('Customer response: ', response)
+                if (response.status === 200) {
+                    getCustomer()
+                    setName('');
+                }
+            })
+            .catch(error => console.log('ERROC: ', error))
+         }
+         return (
+            <div style ={{ marginTop: 20 }} >
+                <h2> New Customer </h2>
+                <input
+                onChange={e => setName (e.target.value)}
+                placeholder="Enter Name"
+                value={name}
+                />
+
+                <button onClick={createCustomer}>
+                    New Customer
+                </button>
+            </div>
+         )
+
+ 
+}
+
+
+
+        return (
+            <div className="p-5">
+                <MenuList items={items} />
+                <NewCustomer getCustomer= {NewCustomer}/>
             </div>
         );
     };
