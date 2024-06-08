@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function apiCall () {
-    const apiUrl = 'https://raw.githubusercontent.com/bootcamp-students/random-restaurant-json/main/foodList.json';
+    const apiUrl = '';
 
     console.log('HERE: >>>>>>>>>>>')
     axios.get(apiUrl)
