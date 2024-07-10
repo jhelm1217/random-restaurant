@@ -1,11 +1,8 @@
 // import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 import axios from 'axios';
-<<<<<<< HEAD
-=======
 
 const Menu = ({ items, addToCart }) => {
->>>>>>> ad8acb098037bc14c73158a9787d708afea29c32
 
 
     //this file, is used to section off the items on my menu and center them on my page.
