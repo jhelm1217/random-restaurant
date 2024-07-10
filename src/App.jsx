@@ -100,8 +100,8 @@ function App() {
             categories={categories}
             activeCategory={activeCategory}
             filterItems={filterItems} />
-          {/* <Menu items={itemsData} /> */}
-          <Menu items={itemsData} onAddToCart={addToCart} />
+          <Menu items={itemsData} />
+          {/* <Menu items={itemsData} onAddToCart={addToCart} /> */}
 
          
         </div>

@@ -9,6 +9,8 @@ function OrderForm ({ items, onSubmit })  {
         items: [],
     });
 
+    const [selectedItem, setSelectedItem] = useState('');
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -23,6 +25,20 @@ function OrderForm ({ items, onSubmit })  {
                 ? [...prevFormData.items, itemName]
                 : prevFormData.items.filter((item) => item !== itemName),
         }));
+    }
+
+    const handleDropdownChange = (e) => {
+        setSelectedItem(e.target.value);
+    };
+
+    const addItemToOrder = () => {
+        if (selectedItem && !formData.items.includes(selectedItem)) {
+            setFormData((prevFormData) => ({
+                ...prevFormData,
+                items: [...prevFormData.items, selectedItem],
+            }));
+            setSelectedItem(''); //reset dropdown selection
+        }
     }
 
 
@@ -84,6 +100,13 @@ function OrderForm ({ items, onSubmit })  {
             </label>
             ))}
         </fieldset>
+        <div>
+            <label htmlFor="itemDropdown">Add Items:</label>
+            <select id="itemDropdown" value={selectedItem} onChange={handleDropdownChange}>
+                <option value="">Select...</option>
+                {items?.map}
+            </select>
+        </div>
         <button type="submit">Submit Order</button>
 
         </form>
