@@ -1,8 +1,11 @@
 // import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 import axios from 'axios';
+<<<<<<< HEAD
+=======
 
 const Menu = ({ items, addToCart }) => {
+>>>>>>> ad8acb098037bc14c73158a9787d708afea29c32
 
 
     //this file, is used to section off the items on my menu and center them on my page.
@@ -35,6 +38,59 @@ const Menu = ({ items, addToCart }) => {
 
     );
 };
+
+// const NewMenu = ({ getMenu}) => {
+//     const [items, setItems] = useState({
+//         title: '',
+//         cuisine: '',
+//         category: '',
+//         price: '',
+//         description: '',
+//       });
+
+//     const createMenu = () => {
+//         axios
+//         .post('http://127.0.0.1:8000/MenuItem/', item) 
+//             .then (response => {
+//                 if (response.status >= 200) {
+//                 setItems({ 
+//                     title: '', 
+//                     cuisine: '', 
+//                     category: '', 
+//                     price: '',
+//                     description: ''
+//                 });
+//                 getMenu()
+//                 }
+//             })
+//            .catch(error => console.log('ERROR: ', error))
+//         }
+//     }
+
+const MenuList = () => {
+        const [items, setItems] = useState([]);
+    
+        const getMenu = () => {
+            axios.get('http://127.0.0.1:8000/MenuItem/')
+                .then(response => {
+                    console.log ('Hereeee', response);
+                    setItems(response.data);
+                })
+                .catch(error => console.log('ERROR: ', error));
+        };
+    
+        useEffect(() => {
+            getMenu(); //built in function that takes two things to complete, 
+        }, []);
+    
+        return (
+            <div className="p-5">
+                <MenuList items={items} />
+                <NewMenu getMenu={getMenu} />
+            </div>
+        );
+    };
+
 
 
 //MenuItem Tab

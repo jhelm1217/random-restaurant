@@ -5,6 +5,7 @@ import Menu from "./Menu"
 import items from "./Items"
 import Categories from "./Categories"
 import DropdownMenu from "./DropdownMenu"
+import axios from 'axios';
 
 const Title = () => {
   return (
